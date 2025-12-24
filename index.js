@@ -11,7 +11,7 @@ const PRIVATE_APP_ACCESS = process.env.PRIVATE_APP_ACCESS_TOKEN;
 
 app.get("/", async (req, res) => {
   const contactsUrl =
-    "https://api.hubapi.com/crm/v3/objects/contacts?limit=1000&properties=firstname,lastname,email";
+    "https://api.hubapi.com/crm/v3/objects/contacts?limit=100&properties=firstname,lastname,email";
   const headers = {
     Authorization: `Bearer ${PRIVATE_APP_ACCESS}`,
     "Content-Type": "application/json",
